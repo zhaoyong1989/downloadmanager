@@ -3,10 +3,9 @@ package com.young.reactnative;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.xinpai.reactnative.R;
 import com.young.download.DownloadManager;
+import com.young.downloadmanager.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         /*DownloadManager downloadManager = (DownloadManager)getSystemService(DOWNLOAD_SERVICE);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(apkUrl));
 
-        request.setTitle("大象投教");
+        request.setTitle("download");
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
         request.setAllowedOverRoaming(false);
         //request.setMimeType("application/vnd.android.package-archive");
@@ -33,14 +32,11 @@ public class MainActivity extends AppCompatActivity {
         File file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         file.mkdir();
 
-        Log.i("zhaoyong", "path:" + file.getAbsolutePath());
-
         //设置文件存放路径
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS  , "welcome.png" ) ;
 
         long id = downloadManager.enqueue(request);*/
 
-        Log.i("zhaoyong", "path:" + getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) + "/apk.png");
         DownloadManager.getInstance().startDownload(apkUrl, getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS) + "/apk.png");
     }
 }
