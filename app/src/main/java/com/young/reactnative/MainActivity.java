@@ -9,7 +9,7 @@ import com.young.downloadmanager.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String apkUrl = "http://img.entgroup.com/upload/1525858620489831.png";
+    private String apkUrl = "";//填入下载地址
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
