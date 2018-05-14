@@ -28,8 +28,8 @@ publish {
     groupId = 'com.young'
     artifactId = 'download' //项目名称
     publishVersion = '1.0.0' //版本号
-    desc = '' //项目描述。可空。
-    website = '' //项目地址，一般填github地址。可空。
+    desc = 'download manager' //项目描述。可空。
+    website = 'https://github.com/zhaoyong1989/downloadmanager.git' //项目地址，一般填github地址。可空。
 }
 
 dependencies {
